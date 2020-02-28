@@ -132,6 +132,18 @@ button[disabled=disabled], button:disabled {
 .campo-invalido{
 	border: 1px solid red;
 }
+
 .bg-danger{
     background-color: #F99;
+}
+
+#mensagens li{
+    text-align: center;
+    padding: 1em;
+    margin-top: 2px;
+}
+
+.fadeOut{
+    opacity: 0;
+    transition: 1s;
 }

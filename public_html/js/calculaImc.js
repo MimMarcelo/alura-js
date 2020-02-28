@@ -5,12 +5,12 @@ for(var i = 0; i < pacientes.length; i++){
     var altura = pacientes[i].querySelector(".info-altura").textContent;
     
     var tdImc = pacientes[i].querySelector(".info-imc");
-    if(peso <= 0 || peso > 300){
+    if(!pesoValido(peso)){
         tdImc.textContent = "Peso inválido";
         pacientes[i].classList.add("bg-danger");
         continue;
     }
-    if(altura <= 0 || altura > 300){
+    if(!alturaValida(altura)){
         tdImc.textContent = "Altura inválida";
         pacientes[i].classList.add("bg-danger");
         continue;
@@ -24,4 +24,12 @@ function calculaIMC(peso, altura){
     imc = (peso / (altura * altura)).toFixed(3);
     
     return imc;
+}
+
+function pesoValido(peso){
+    return (peso > 0 && peso < 300);
+}
+
+function alturaValida(altura){
+    return (altura > 0 && altura < 3);
 }
