@@ -11,13 +11,17 @@ function salvarPaciente(event) {
         return;
     }
     
-    var trPaciente = setTr(paciente);
-
-    document.querySelector("#tabela-pacientes").appendChild(trPaciente);
-
+    addPacineteNaTabela(paciente);
+    
     form.reset();
 
     form.nome.focus();
+}
+
+function addPacineteNaTabela(paciente){
+    var trPaciente = setTr(paciente);
+
+    document.querySelector("#tabela-pacientes").appendChild(trPaciente);
 }
 
 function getDataFromForm(form) {

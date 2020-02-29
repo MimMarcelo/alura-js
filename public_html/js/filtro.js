@@ -6,9 +6,9 @@ campoFiltro.addEventListener("input", function(){
     var pacientes = document.querySelectorAll(".paciente");
     pacientes.forEach(function(paciente){
         var tdNome = paciente.querySelector(".info-nome");
-        paciente.classList.remove("fadeOut");
+        paciente.classList.remove("invisivel");
         if(!tdNome.textContent.toLowerCase().includes(campoFiltro.value.toLowerCase())){
-            paciente.classList.add("fadeOut");
+            paciente.classList.add("invisivel");
         }
     });
 });
